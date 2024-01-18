@@ -1,4 +1,5 @@
 const { login } = require("./auth.resolvers");
+const { addCategory } = require("./category.resolvers");
 const { getProduct, getProducts, addProduct, updateProduct, deleteProduct } = require("./product.resolvers");
 
 
@@ -20,7 +21,8 @@ const resolvers = {
     login,
     addProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    addCategory
   }
 }
 
