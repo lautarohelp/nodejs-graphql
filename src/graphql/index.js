@@ -12,8 +12,19 @@ const typeDefs = `
     getBoolean: Boolean
     getID: ID
     getNumbers(numbers: [Int!]!): [Int]
+    getProduct: Product
+  }
+
+  type Product {
+    id: ID!
+    name: String!
+    price: Float!
+    description: String!
+    image: String!
+    createdAt: String!
   }
 `;
+
 // Get = Query
 // POST, PUT, DELETE = Mutations
 // ! = not null
@@ -31,7 +42,17 @@ const resolvers = {
     getString: () => 'Hello world',
     getBoolean: () => true,
     getID: () => '1234567890',
-    getNumbers: (_, args) => args.numbers
+    getNumbers: (_, args) => args.numbers,
+    getProduct: () => {
+      return {
+        id: '1212',
+        name: 'Lauatro',
+        price: 100.12,
+        description: 'bla bla blaaaa',
+        image: 'http://image.asas',
+        createdAt: new Date().toISOString(),
+      }
+    }
   }
 }
 
