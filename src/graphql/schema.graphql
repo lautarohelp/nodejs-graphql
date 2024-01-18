@@ -1,0 +1,29 @@
+type Query {
+  hello: String!
+  getPerson(name: String, age:Int): String
+  getInit(age: Int): Int
+  getFloat(price: Float): String
+  getString: String
+  getBoolean: Boolean
+  getID: ID
+  getNumbers(numbers: [Int!]!): [Int]
+  getProduct: Product!
+}
+
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+  description: String!
+  image: String!
+  createdAt: String!
+}
+
+
+# Get = Query
+# POST, PUT, DELETE = Mutations
+# ! = not null
+
+# List
+# [string]
+# [Int]
