@@ -66,9 +66,11 @@ type User {
 }
 
 input CreateCategoryDto {
-  name: String!
-  image: String!
+  name: CategoryNameType!
+  image: URL!
 }
+
+scalar CategoryNameType
 
 
 # Get = Query
